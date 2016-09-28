@@ -10,6 +10,7 @@
   with_items:
     - openssh-server
     - openssh-client
+    - sudo
 
 - name: global config
   template:
