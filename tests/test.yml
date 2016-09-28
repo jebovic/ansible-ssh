@@ -3,3 +3,5 @@
   remote_user: root
   roles:
     - role_under_test
+  vars:
+    admin_authorized_key: ssh-rsa THIS/IS/A/SAMPLE/KEY role_under_test
