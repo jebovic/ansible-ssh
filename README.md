@@ -1,6 +1,8 @@
 ssh
 ===
 
+[![Build Status](https://travis-ci.org/jebovic/ansible-ssh.svg?branch=master)](https://travis-ci.org/jebovic/ansible-ssh)
+
 Install and configure SSH server
 
 Role Variables
