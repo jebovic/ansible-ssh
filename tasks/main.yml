@@ -35,7 +35,7 @@
     comment: "Cluster admin"
     state: present
     group: "{{ admin_user_group }}"
-    shell: /bin/zsh
+    shell: "{{ admin_shell }}"
 
 - name: add public key to authorized keys
   authorized_key:

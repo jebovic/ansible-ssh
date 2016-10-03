@@ -17,6 +17,7 @@ sshd_port: 22
 admin_user: ops
 admin_user_group: admin
 admin_authorized_key: "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
+admin_shell: /bin/bash
 ```
 
 Example Playbook
