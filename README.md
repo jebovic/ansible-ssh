@@ -1,7 +1,7 @@
 ssh
 ===
 
-[![Build Status](https://travis-ci.org/jebovic/ansible-ssh.svg?branch=master)](https://travis-ci.org/jebovic/ansible-ssh)
+[![Build Status](https://travis-ci.org/jebovic/ansible-ssh.svg?branch=master)](https://travis-ci.org/jebovic/ansible-ssh) [![Ansible Galaxy](https://img.shields.io/badge/galaxy-jebovic.ssh-blue.svg?style=flat)](https://galaxy.ansible.com/jebovic/ssh)
 
 Install and configure SSH server
 
