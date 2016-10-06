@@ -27,6 +27,11 @@ script:
     && (echo 'Idempotence test: pass' && exit 0)
     || (echo 'Idempotence test: fail' && exit 1)
   # test role tasks
+  - >
+    docker exec --tty "$(cat ${container_id})" env TERM=xterm ls /home
+    | grep ops
+    && (echo 'Home directory for user exists' && exit 0)
+    || (echo 'User ops has no home' && exit 1)
 
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
