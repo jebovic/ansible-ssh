@@ -36,7 +36,7 @@ script:
     || (echo 'Idempotence test: fail' && exit 1)
   # test role tasks
   - >
-    docker exec --tty "$(cat ${container_id})" env TERM=xterm ls /home
+    docker exec "$(cat ${container_id})" env TERM=xterm ls /home
     | grep ops
     && (echo 'Home directory for user exists' && exit 0)
     || (echo 'User ops has no home' && exit 1)

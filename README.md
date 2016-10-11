@@ -9,6 +9,12 @@ Role Variables
 --------------
 
 ```
+# Install configuration
+ssh_packages:
+    - openssh-server
+    - openssh-client
+    - sudo
+
 # SSH server configuration
 sshd_config_file: /etc/ssh/sshd_config
 sshd_port: 22
@@ -18,6 +24,7 @@ admin_user: ops
 admin_user_group: admin
 admin_authorized_key: "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
 admin_shell: /bin/bash
+admin_user_sudoer: yes
 ```
 
 Example Playbook

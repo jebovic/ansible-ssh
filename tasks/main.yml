@@ -7,10 +7,7 @@
     install_recommends: false
     update_cache:       yes
     cache_valid_time:   300
-  with_items:
-    - openssh-server
-    - openssh-client
-    - sudo
+  with_items: "{{ ssh_packages }}"
 
 - name: global config
   template:
@@ -49,3 +46,4 @@
     state: present
     regexp: '^%{{ admin_user_group }}'
     line: '%{{ admin_user_group }} ALL=(ALL) NOPASSWD: ALL'
+  when: admin_user_sudoer
