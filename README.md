@@ -8,10 +8,10 @@ Install and configure SSH server
 Role Variables
 --------------
 
-```
+```yaml
 # Install configuration
 ssh_packages:
-    - openssh-server
+- openssh-server
     - openssh-client
     - sudo
 
@@ -30,11 +30,16 @@ admin_user_sudoer: yes
 Example Playbook
 ----------------
 
+```yaml
+- hosts: servers
+  roles:
+     - { role: jebovic.ssh }
 ```
-    - hosts: servers
-      roles:
-         - { role: jebovic.ssh }
-```
+
+Tags
+----
+
+* ssh_config : only update config and restart service
 
 License
 -------

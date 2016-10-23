@@ -17,6 +17,7 @@
     group: root
     mode: 0644
   notify: restart ssh
+  tags: ssh_config
 
 - name: "add ssh {{ admin_user_group }} group"
   group:
